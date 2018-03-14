@@ -20,90 +20,29 @@ h1, h2, h3,
     background-color: white;
     border-color: #E7E6E7;
 }
-/* bug */
-.task-board[data-category-id="243"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="28"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="157"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="38"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="39"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="37"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="164"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="150"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="194"] > div.task-board-expanded > div.task-board-category-container > span > a {
-    background-color: #D45550;
-    color: white;
-}
-/* blocked */
-.task-board[data-category-id="223"] > div.task-board-expanded > div.task-board-category-container > span > a {
-    background-color: #863C39;
-    color: white;
-}
-/* spike */
-.task-board[data-category-id="170"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="163"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="155"] > div.task-board-expanded > div.task-board-category-container > span > a {
-    background-color: rgb(238, 238, 238);
-    color: #666;
-}
-/* feature */
-.task-board[data-category-id="244"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="160"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="167"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="30"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="196"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="152"] > div.task-board-expanded > div.task-board-category-container > span > a {
-    background-color: #CFF09E;
-    color:#555;
-}
-/* milestone */
-.task-board[data-category-id="245"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="25"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="161"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="168"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="153"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="199"] > div.task-board-expanded > div.task-board-category-container > span > a {
-    background-color: #79BD9A;
-    color:#555;
-}
-/* improvement */
-.task-board[data-category-id="21"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="32"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="40"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="212"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="198"] > div.task-board-expanded > div.task-board-category-container > span > a {
-    background-color: #A8DBA8;
-    color:#fff;
-}
-/* metrics */
-.task-board[data-category-id="213"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="233"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="232"] > div.task-board-expanded > div.task-board-category-container > span > a {
-    background-color: #D2B279;
-    color:#fafafa;
-}
-/* setup */
-.task-board[data-category-id="169"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="162"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="154"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="22"] > div.task-board-expanded > div.task-board-category-container > span > a {
-    background-color: #b2ebf2;
-    color:#555;
-}
-/* comunication */
-.task-board[data-category-id="156"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="158"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="165"] > div.task-board-expanded > div.task-board-category-container > span > a {
-    background-color: rgb(168, 207, 255);
-    color:#555;
-}
-/* deploy */
-.task-board[data-category-id="18"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="159"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="166"] > div.task-board-expanded > div.task-board-category-container > span > a,
-.task-board[data-category-id="151"] > div.task-board-expanded > div.task-board-category-container > span > a {
-    background-color: #0B486B;
-    color:#fafafa;
-}
+.category-Deploy a,
+.category-Blocked a,
+.category-Métricas a,
+.category-Inprovement a,
+.category-Bug a {color: white;}
+
+.category-Setup a,
+.category-Spike a,
+.category-Milestone a,
+.category-Comunication a,
+.category-Feature a {color: #555;}
+
+.category-Spike {background-color: rgb(238, 238, 238);}
+.category-Inprovement {background-color: #A8DBA8;}
+.category-Métricas {background-color: #D2B279;}
+.category-Setup {background-color: #b2ebf2;}
+.category-Comunication {background-color: rgb(168, 207, 255);}
+.category-Deploy {background-color: #0B486B;}
+.category-Bug {background-color: #D45550;}
+.category-Blocked {background-color: #863C39;}
+.category-Feature {background-color: #CFF09E;}
+.category-Milestone {background-color: #79BD9A;}
+
 tbody td {border: none;}
 div.task-board-recent {border-width: 1px;}
 .board-task-list {
