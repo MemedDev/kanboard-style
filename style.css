@@ -79,3 +79,9 @@ table th a {color: #555;}
 }
 .board-add-icon i {font-size: 1em;}
 .progress-bar .color-yellow {background-color: #A8DBA8;}
+.avatar-letter[title="?"] {
+    background-image: url(https://image.flaticon.com/icons/png/512/270/270137.png);
+    background-color: transparent !important;
+    background-size: 100%;
+    color: transparent;
+}
