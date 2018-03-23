@@ -5,51 +5,80 @@
  * Path of success http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
  * Problem http://www.colourlovers.com/palette/349481/duck_problems
  */
+textarea:focus, 
+input[type="number"]:focus, 
+input[type="date"]:focus, 
+input[type="email"]:focus, 
+input[type="password"]:focus, 
+input[type="text"]:focus {
+    outline: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
 body,
 h1, h2, h3,
 .task-board a,
 .views li.active a {color: #555;}
 .task-board {
-    padding: 6px; 
+    padding: 6px;
     border-radius: 3px;
-    margin-bottom: 5px;
+    margin-bottom: 6px;
 }
-.task-board.color-yellow, 
-.task-summary-container.color-yellow, 
-.color-picker-square.color-yellow {
-    background-color: white;
-    border-color: #E7E6E7;
+.task-board {
+    background-color: white !important;
+    border-width: 0 !important;
+    border-top-width: 5px !important;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
-.category-Deploy a,
-.category-Blocked a,
-.category-Métricas a,
-.category-Inprovement a,
-.category-Bug a {color: white;}
+.task-board-expanded > div.task-board-title {
+    margin-top: 10px;
+    margin-bottom: 15px;
+}
+.task-board-expanded > div.task-board-title a {
+    line-height: 1.5em;
+}
+.task-tags {
+    text-align: right;
+}
+.task-tags li {
+    border: 0 !important;
+    padding: 1px 5px;
+    background-color: #eee;
+    margin: 0 0 4px 0 !important;
+}
 
-.category-Setup a,
-.category-Spike a,
-.category-Milestone a,
-.category-Comunication a,
-.category-Feature a {color: #555;}
+.task-board-category.category-Deploy a,
+.task-board-category.category-Blocked a,
+.task-board-category.category-Métricas a,
+.task-board-category.category-Inprovement a,
+.task-board-category.category-Setup a,
+.task-board-category.category-Spike a,
+.task-board-category.category-Milestone a,
+.task-board-category.category-Comunication a,
+.task-board-category.category-Feature a,
+.task-board-category.category-Bug a {color: white;}
 
-.category-Spike {background-color: rgb(238, 238, 238);}
-.category-Inprovement {background-color: #A8DBA8;}
-.category-Métricas {background-color: #D2B279;}
-.category-Setup {background-color: #b2ebf2;}
-.category-Comunication {background-color: rgb(168, 207, 255);}
-.category-Deploy {background-color: #0B486B;}
-.category-Bug {background-color: #D45550;}
-.category-Blocked {background-color: #863C39;}
-.category-Feature {background-color: #CFF09E;}
-.category-Milestone {background-color: #79BD9A;}
+.task-board-category {border: 1px solid #aaa;}
+.task-board-category a {color: #aaa;}
+
+.task-board-category.category-Spike {background-color: rgb(238, 238, 238); border: none;}
+.task-board-category.category-Inprovement {background-color: #A8DBA8; border: none;}
+.task-board-category.category-Métricas {background-color: #D2B279; border: none;}
+.task-board-category.category-Setup {background-color: #b2ebf2; border: none;}
+.task-board-category.category-Comunication {background-color: rgb(168, 207, 255); border: none;}
+.task-board-category.category-Deploy {background-color: #0B486B; border: none;}
+.task-board-category.category-Bug {background-color: #D45550; border: none;}
+.task-board-category.category-Blocked {background-color: #863C39; border: none;}
+.task-board-category.category-Feature {background-color: #CFF09E; border: none;}
+.task-board-category.category-Milestone {background-color: #79BD9A; color: white; border: none;}
 
 tbody td {border: none;}
 div.task-board-recent {border-width: 1px;}
 .board-task-list {
-    padding: 7px;
+    padding: 6px;
     background-color: #F3F1F1;
-    border-radius: 3px;
-    margin: 3px;
+    border-right: 1px solid white;
 }
 .table-list-row {padding:6px;}
 table td {padding: 0px;}
@@ -61,7 +90,6 @@ table th a {color: #555;}
     border-radius: 3px;
 }
 .task-board-category {
-    border: none;
     font-weight: normal;
 }
 .task-tags li {
@@ -78,10 +106,60 @@ table th a {color: #555;}
     height: 100%;
 }
 .board-add-icon i {font-size: 1em;}
-.progress-bar .color-yellow {background-color: #A8DBA8;}
+/* Robot avatar for bitbucket comments */
 .avatar-letter[title="?"] {
     background-image: url(https://image.flaticon.com/icons/png/512/270/270137.png);
     background-color: transparent !important;
     background-size: 100%;
     color: transparent;
+}
+/* Modal Adjustments */
+#modal-box {
+    background: #F3F1F1;
+    padding: 15px;
+    box-sizing: border-box;
+}
+#modal-content .select2-selection--multiple,
+#modal-content textarea,
+#modal-content input[type="number"], 
+#modal-content input[type="date"], 
+#modal-content input[type="email"], 
+#modal-content input[type="password"], 
+#modal-content input[type="text"]:not(.input-addon-field) {
+    border-radius: 3px;
+    padding: 3px 6px;
+    border: 1px solid #ddd;
+}
+#modal-content label {
+    margin-bottom: 5px;
+}
+#modal-content .task-form-main-column .select2-container {
+    width: 720px !important;
+}
+#modal-content .text-editor textarea {
+    width: 705px !important;
+}
+#modal-header {
+    position: absolute;
+    top: 6px;
+    left: 8px;
+    right: 8px;
+}
+/* Header Adjustments */
+header .title-container h1 span.logo {
+    background-image: url(https://memed-bookstack.s3.amazonaws.com/uploads/images/system/2018-02-Feb/scaled-200-43/logo.png);
+    background-size: 74%;
+    background-repeat: no-repeat;
+    color: transparent !important;
+}
+header .title-container h1 span.logo a {
+    color: transparent !important;
+}
+header .title-container h1 span.logo a span {
+    color: transparent !important;
+}
+header .board-selector-container .select-dropdown-input-container {
+    border: none !important;
+    border-radius: 0 !important;
+    padding: 3px !important;
 }
