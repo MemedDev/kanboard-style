@@ -5,6 +5,10 @@
  * Path of success http://www.colourlovers.com/palette/580974/Adrift_in_Dreams
  * Problem http://www.colourlovers.com/palette/349481/duck_problems
  */
+
+ /* Fonte */
+@import url('https://fonts.googleapis.com/css?family=Lato:400,700|Montserrat:400,700');
+
 textarea:focus, 
 input[type="number"]:focus, 
 input[type="date"]:focus, 
@@ -15,10 +19,19 @@ input[type="text"]:focus {
     -webkit-box-shadow: none;
     box-shadow: none;
 }
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+/* Cores das fontes */
 body,
 h1, h2, h3,
 .task-board a,
-.views li.active a {color: #555;}
+.views li.active a {
+    color: #606469;
+}
+
 .task-board {
     padding: 6px;
     border-radius: 3px;
@@ -41,9 +54,10 @@ h1, h2, h3,
 .task-tags {
     text-align: right;
 }
-.task-tags li {
+
+.task-board-expanded .task-tags > ul > li {
     border: 0 !important;
-    padding: 1px 5px;
+    padding: 1px 3px !important;
     background-color: #eee;
     margin: 0 0 4px 0 !important;
 }
@@ -276,3 +290,477 @@ div.form-login ul.no-bullet:before {
 div.form-login ul.no-bullet li {
     display: inline-block;
 }
+
+/* Barra do Header */
+header {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 12px 10px;
+    margin-bottom: 15px;
+    border-bottom: none;
+    background-color: white;
+    box-shadow: 0 2px 10px 0px rgba(0, 0, 0, 0.2);
+}
+
+header h1 .title {
+    color: #777;
+    font-family: 'Montserrat', 'Lucida Grande', sans-serif !important;
+    font-size: 20px;
+}
+
+#select-dropdown-menu {
+    top: 50px !important;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2), 0 4px 15px -1px rgba(0,0,0,0.16);
+    overflow: auto;
+}
+
+.select-dropdown-menu-item {
+    padding: 5px 10px;
+    border-bottom: 1px solid #f2f2f2;
+    background-color: white;
+}
+
+.select-dropdown-menu-item.active {
+    color: #fff;
+    background-color: #02b1da;
+}
+
+.pomodoro-widget-timer {
+    margin-right: 15px !important;
+}
+
+.menus-container .notification {
+    display: block;
+    margin-right: 10px;
+}
+
+.menus-container .header-creation-menu {
+    display: inline-block;
+    margin-right: 10px;
+}
+
+/* Barra abaixo do header */
+.project-header {
+    margin-bottom: 10px;
+}
+
+/* Grupo de botões */
+.views li {
+    padding: 8px;
+    background-color: white;
+    border: 1px solid #eee;
+    border-right: 0;
+    transition: .2s;
+}
+
+.views li:hover,
+.views li:focus {
+    background-color: #fafafa;
+}
+
+.views li.active {
+    background-color: #02b1da;
+    border-color: #02b1da;
+}
+
+.views li.active:hover,
+.views li.active:focus, {
+    background-color: #02b1da;
+    border-color: #02b1da;
+}
+
+.views li a {
+    text-decoration: none !important;
+}
+
+.views li.active a {
+    color: white !important;
+    text-decoration: none !important;
+}
+
+.views li.active a .fa {
+    color: white !important;
+    text-decoration: none
+}
+
+/* filtros */
+.filter-box .input-addon {
+    display: flex;
+    height: 34px;
+    position: relative;
+    top: -4px;
+}
+
+.filter-box .input-addon-item {
+    background-color: white;
+    padding: 7px 0.75em;
+}
+
+/* dropdowns */
+#dropdown .dropdown-submenu-open {
+    margin-top: 8px !important;
+    margin-left: -6px !important;
+    border: none;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.2), 0 4px 15px -1px rgba(0,0,0,.16);
+    overflow: auto;
+}
+
+#dropdown .dropdown-submenu-open li {
+    padding: 10px;
+    border-bottom: 1px solid #f2f2f2;
+    background-color: white;    
+}
+
+#dropdown .dropdown-submenu-open li:hover {
+    background-color: #02b1da;
+    color: white;
+}
+
+#dropdown .dropdown-submenu-open li:last-child {
+    border-bottom: none;
+}
+
+/* Tela de Tasks */
+#task-summary h2 {
+    color: #777;
+    font-size: 1.4em;
+    font-family: 'Montserrat', 'Lucida Grande', sans-serif;
+}
+
+.sidebar {
+    flex-grow: 1;
+    width: 22%;
+    padding: 0 15px;
+    border-radius: 0;
+    border-right: 1px solid #f5f5f5;
+}
+
+.sidebar > ul li {
+    border-bottom: none;
+    padding: 0 4px;
+    transition: .3s;
+}
+
+.sidebar > ul li:hover,
+.sidebar > ul li.active {
+    padding-left: 4px;
+}
+
+.sidebar > ul > li > a > .fa,
+.sidebar > ul > li > .fa {
+    color: #42a8cb;
+    margin-right: 5px;
+}
+
+.sidebar-content {
+    flex-grow: 1;
+    width: 78%;
+    padding: 0 15px;
+}
+
+/* card das tasks */
+.task-summary-container {
+    margin-bottom: 15px;
+    padding: 10px 12px;
+    color: #555;
+    font-family: 'Montserrat', 'Lucida Grande', sans-serif;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 3px 10px -1px rgba(0, 0, 0, 0.18);
+}
+
+.task-summary-container.color-green {
+    color: white;
+    background-color: #43a047;
+}
+
+.task-summary-container.color-yellow {
+    background-color: #ffd600;
+}
+
+.task-summary-container.color-blue {
+    background-color: #039be5;
+    color: white;
+}
+
+.task-summary-container.color-purple {
+    color: white;
+    background-color: #6200ea;
+}
+
+.task-summary-container.color-amber {
+    color: white;
+    background-color: #ffb300;
+}
+
+.task-summary-container.color-brown {
+    color: white;
+    background-color: #6d4c41;
+}
+
+.task-summary-container.color-red {
+    color: white;
+    background-color: #e53935;
+}
+
+.task-summary-container.color-orange {
+    color: white;
+    background-color: #fb8c00;
+}
+
+.task-summary-container.color-teal {
+    color: white;
+    background-color: #009688;
+}
+
+.task-summary-container.color-pink {
+    color: white;
+    background-color: #ff4081;
+}
+
+.task-summary-column {
+    color: inherit;
+}
+
+.task-summary-column span {
+    color: inherit;
+}
+
+#task-summary .task-tags li {
+    color: inherit !important;
+    padding: 6px !important;
+    background-color: rgba(0, 0, 0, 0.1) !important;
+}
+
+.user-mention-link {
+    display: inline-block;
+    padding: 0px 8px;
+    margin-bottom: 2px;
+    color: white;
+    background-color: #42a8cb;
+    font-size: 14px;
+    font-weight: normal;
+    border-radius: 20px;
+}
+
+.sidebar .sidebar-title h2 {
+    margin-top: 0;
+    font-family: 'Montserrat', 'Lucida Grande', sans-serif;
+    color: #42a8cb;
+    font-size: 20px;
+}
+
+/* Botões */
+.btn {
+    font-size: 1em;
+    padding: 8px 16px;
+    text-transform: uppercase;
+    border: none;
+    border-radius: 4px;
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+    transition: .2s;
+}
+
+.btn:hover,
+.btn:focus {
+    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2),
+                0 3px 8px 0 rgba(0, 0, 0, 0.16);
+}
+
+/* controles de formulário */
+select {
+    background-color: white;
+    padding: 5px;
+    height: 36px;
+    min-width: 100px;
+}
+
+textarea {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+textarea:focus {
+    border-color: rgb(66, 168, 203) !important;
+    box-shadow: 0 0 0 3px rgb(66, 168, 203, 0.1) !important;
+}
+
+::-webkit-input-placeholder { /* Chrome/Opera/Safari */
+    color: #888;
+    font-weight: normal;
+}
+::-moz-placeholder { /* Firefox 19+ */
+    color: #888;
+    font-weight: normal;
+}
+:-ms-input-placeholder { /* IE 10+ */
+    color: #888;
+    font-weight: normal;
+}
+:-moz-placeholder { /* Firefox 18- */
+    color: #888;
+    font-weight: normal;
+}
+
+.text-editor-toolbar {
+    padding: 8px 0px;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice {
+    padding: 2px 10px !important;
+    color: white !important;
+    background-color: #5897fb !important;
+    border-radius: 30px !important;
+    border: 1px solid #02b1da !important;
+}
+
+.select2-container--default .select2-selection--multiple .select2-selection__choice__remove {
+    color: inherit !important;
+    margin-right: 6px !important;
+}
+
+/* Comentários */
+.comment-sorting {
+    padding: 10px 0;
+}
+
+.comment-sorting a {
+    display: inline-block;
+    border: 1px solid #ddd;
+    padding: 5px 10px;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+.comment-sorting a:hover,
+.comment-sorting a:focus {
+    background-color: #eee;
+}
+
+.comment {
+    padding: 10px;
+    border-radius: 4px;
+    transition: .2s;
+    position: relative;
+}
+
+.comment:hover {
+    box-shadow: 0 4px 8px -1px rgba(0, 0, 0, 0.1);
+}
+
+.comment-title {
+    font-family: 'Montserrat', 'Lucida Grande', sans-serif;
+    border: 1px solid #d1d5da;
+    padding: 15px;
+    background-color: #f6f8fa;
+    border-bottom: 1px solid #d1d5da;
+    border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+}
+
+.comment-content {
+    padding: 15px 15px 5px 15px;
+    border-bottom: 1px solid #d1d5da;
+    border-bottom-right-radius: 3px;
+    border-bottom-left-radius: 3px;
+    border: 1px solid #d1d5da;
+    border-top: none;
+}
+
+.comment-actions {
+    position: absolute;
+    right: 19px;
+    top: 26px;
+}
+
+.avatar-48 img, .avatar-48 div {
+    border-radius: 3px;
+}
+
+/* acordion */
+.accordion-title {
+    font-family: 'Monserrat', 'Lucida Grande', sans-serif;
+    font-size: 15px;
+    background-position: 11px;
+}
+
+/* modal */
+#modal-overlay {
+    background: rgba(0,0,0,0.4);
+}
+
+#modal-box {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    margin: auto;
+    max-height: 80%;
+    width: 80%;
+    background: #fff;
+    border-radius: 4px;
+    overflow: auto;
+    box-shadow: 0 5px 25px 0 rgba(0,0,0,0.3);
+    transform: none;
+}
+
+#modal-close-button .fa.fa-times {
+    color: #e01818;
+    font-size: 18px;
+}
+
+#modal-box .page-header h2 {
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+    border-bottom: 0;
+    font-family: 'Montserrat', 'Lucida Grande', sans-serif;
+    font-size: 20px;
+    color: #777;
+}
+
+#modal-box textarea,
+#modal-box select,
+#modal-box input[type="number"],
+#modal-box input[type="date"],
+#modal-box input[type="email"],
+#modal-box input[type="password"],
+#modal-box input[type="text"]:not(.input-addon-field) {
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    transition: .3s;
+}
+
+#modal-box textarea:focus,
+#modal-box select:focus,
+#modal-box input[type="number"]:focus,
+#modal-box input[type="date"]:focus,
+#modal-box input[type="email"]:focus,
+#modal-box input[type="password"]:focus,
+#modal-box input[type="text"]:not(.input-addon-field):focus {
+    border-color: rgb(66, 168, 203) !important;
+    box-shadow: 0 0 0 3px rgb(66, 168, 203, 0.1) !important;
+}
+
+.form-actions button {
+    margin-right: 10px;
+}
+
+.form-actions a {
+    display: inline-block;
+    margin-left: 10px;
+    text-decoration: none;
+    padding: 9px 10px;
+    text-transform: uppercase;
+    color: #555;
+    background: #eee;
+    border-radius: 4px;
+}
+
