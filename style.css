@@ -99,6 +99,9 @@ div.task-board-recent {border-width: 1px;}
     background-color: #F3F1F1;
     border-right: 1px solid white;
 }
+.board-task-list-limit .board-task-list {
+    background-color: #DF5353;
+}
 .table-list-row {padding:6px;}
 table td {padding: 0px;}
 table th {font-size: 0.9em;}
@@ -241,7 +244,7 @@ div.form-login button[type="submit"]:hover {
     background-color: #00afd1;
     border: none;
 }
-div.form-login form:after {
+div.form-login .no-bullet:after {
     position: fixed;
     color: white;
     content: "Tasks que tornam a saúde mais humana e eficiente";
@@ -255,13 +258,14 @@ div.form-login form:after {
     line-height: 24px;
     padding-top: 20px;
     z-index: -1;
+    text-align: left;
 }
 div.form-login .form-actions {
     padding-top: 0;
     text-align: right;
 }
 div.form-login .form-required {
-    display: none;
+   display: none;
 }
 div.form-login input[type="text"], div.form-login input[type="password"] {
     border-bottom: 1px solid #ccc;
@@ -764,3 +768,6 @@ textarea:focus {
     border-radius: 4px;
 }
 
+#form-owner_ms {
+    height: 150px;
+}
